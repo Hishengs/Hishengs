@@ -25,17 +25,17 @@ app.start();
 首先介绍一下一个典型的 Heysoo 项目的目录结构：
 ```js
 —— root
-   ├── app `// 主要应用目录`
+   ├── app              // 主要应用目录
    |   ├── controller
    |   ├── service
    |   ├── view
    |   ├── model
    |   ├── static
    |   ├── schedule
-   |   ├── router.js `// 全局路由配置`
+   |   ├── router.js    // 全局路由配置
    ├── node_modules
-   ├── index.js `// 启动文件`
-   ├── config.js `// 项目配置文件`
+   ├── index.js         // 启动文件
+   ├── config.js        // 项目配置文件
    ├── package.json
 ```
 下面我们通过一步一步修改的方式完成以上所有功能的配置。
@@ -93,7 +93,7 @@ module.exports = app => {
 			this.ctx.body = 'hello, heysoo';
 		}
 	}
-	return new HomeController();
+	return HomeController();
 }
 ```
 
@@ -105,7 +105,7 @@ Node
 > Heysoo 对 Node 版本最低要求是 7.6.0 +（为了使用最新的 async/await 特性）。
 如果你的 Node 版本比较低，可以考虑通过 babel 进行 polyfill，参见 [如何 polyfill？](/FAQ?id=%E5%A6%82%E4%BD%95-polyfill%EF%BC%9F)。
 
-> Node 最新 LTS 版本已经到了 8.9.1，后端语言不像浏览器，建议尽可能升级到比较新的版本并拥抱新的语言特性。
+> Node 最新 LTS 版本已经到了 8.9.4，后端语言不像浏览器，建议尽可能升级到比较新的版本并拥抱新的语言特性。
 
 ## 特性
 ### ![](./imgs/icons/config.png) 可配置，可拆卸
