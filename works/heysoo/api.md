@@ -39,8 +39,11 @@ const app = new Heysoo();
 
 **注意** 如果传入了 config 参数，将会覆盖掉 `config.js` 原有的参数设置。
 <br><br>
-#### app.hook
-**简介** 应用钩子，钩子是一个很强大的功能，你可以通过该特性向 Heysoo 添加自己的插件。app.hook 不同于 app.use，它只会在应用启动时执行一次。
+#### app.beforeStart
+**简介** 应用启动前的钩子。
+
+#### app.afterStart
+**简介** 应用启动后的钩子。
 
 #### app.getConfig
 **简介** 获取当前配置

@@ -44,9 +44,7 @@ Heysoo 框架会在每次 POST 请求中检查该字段，如果不存在或不�
 ## hook / 钩子
 **状态** <span class="badge badge-primary">working</span>
 ### app.beforeStart
-### app.hook
-等同于 `app.beforeStart`
-### app.beforeRouterStart
+### app.afterStart
 
 ## httpClient
 框架本身不内置此功能，你可以通过插件的形式选择自己喜欢的 http 请求库(例如 [axios](https://github.com/mzabriskie/axios))集成到框架中来，用以例如向第三方站点发起认证请求或资源请求。
