@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+      <title>Hisheng - 音乐</title>
+    </head>
+    <style>
+      html, body {
+        font-family: 'Microsoft Yahei';
+        text-align: center;
+        color: #333;
+      }
+      #music-title {
+        font-size: 24px;
+        margin-top: 300px;
+        margin-bottom: 40px;
+      }
+      #tip {
+        display: none;
+        margin-top: 20px;
+        font-size: 14px;
+        color: #666;
+      }
+      #lyric {
+        margin-top: 30px;
+        font-size: 14px;
+        width: 500px;
+        margin: 0 auto;
+      }
+    </style>
+    <link rel="stylesheet" href="../css/page.css">
+    <body>
+      <p id="music-title"></p>
+      <p class="items">
+        <a href="javascript:play(-1);" class="button">上一首</a>
+        <a href="javascript:play();" class="button" id="pause-btn">暂停</a>
+        <a href="javascript:play(+1);" class="button">下一首</a>
+        <a href="../index.html" class="button back">返回</a>
+      </p>
+      <p id="tip"></p>
+      <div id="lyric"></div>
+      <audio id="song-player"></audio>
+      <script>
+        const songList = [
+          {
+            name: "1973",
+            player: "James Blunt",
+            url: "./james blunt/1973.m4a",
+            lyric: '',
+          },
+          {
+            name: "Sweet Child O' Mine",
+            player: "Guns N' Roses",
+            url: "./Guns N' Roses/Sweet Child O' Mine.mp3",
+            lyric: '',
+          },
+          {
+            name: "给自己的歌",
+            player: "李宗盛",
+            url: "./李宗盛/给自己的歌.mp3",
+            lyric: '',
+          },
+        ];
+        const songPlayer = document.getElementById('song-player');
+        const musicTitle = document.getElementById('music-title');
+        const pauseBtn = document.getElementById('pause-btn');
+        const tip = document.getElementById('tip');
+        const lyric = document.getElementById('lyric');
+        let currentPlayIndex = 0;
+        function play (step){
+          if(step === undefined){
+            if(songPlayer.paused){
+              songPlayer.play();
+              pauseBtn.innerText = '暂停';
+            }else {
+              songPlayer.pause();
+              pauseBtn.innerText = '播放';
+            }
+          }else {
+            const nextIndex = currentPlayIndex + step;
+            if(nextIndex >= 0 && nextIndex <= songList.length - 1){
+              currentPlayIndex = nextIndex;
+              const songToPlay = songList[currentPlayIndex];
+              songPlayer.src = songToPlay.url;
+              musicTitle.innerText = `${songToPlay.name} ${songToPlay.player}`;
+              lyric.innerHTML = songToPlay.lyric;
+              songPlayer.play();
+              pauseBtn.innerText = '暂停';
+            }else {
+              tip.innerText = step > 0 ? '已经是最后一首' : '已经是第一首';
+              tip.style.display = 'block';
+              setTimeout(() => {
+                tip.style.display = 'none';
+              }, 1500);
+            }
+          }
+        }
+        setTimeout(() => {
+          play(0);
+        }, 200);
+      </script>
+    </body>
+</html>
