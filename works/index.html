@@ -11,14 +11,24 @@
         text-align: center;
         color: #333;
       }
-      p.items {
+      p.works {
         margin-top: 300px;
+        margin-bottom: 40px;
+      }
+      p.works > .work {
+        font-size: 20px;
+        text-decoration: none;
+        color: inherit;
+      }
+      p.works > .work:hover {
+        padding-bottom: 2px;
+        border-bottom: 2px solid #444;
       }
     </style>
     <link rel="stylesheet" href="../css/page.css">
     <body>
-      <p class="items">
-        <a href="./heysoo/index.html" class="button">Heysoo</a>
+      <p class="works">
+        <a href="./heysoo/index.html" class="work" title="A Node Web Framework Based on Koa">Heysoo</a>
       </p>
       <p>
         <a href="../index.html" class="button back">返回</a>
