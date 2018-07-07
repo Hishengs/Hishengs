@@ -2,15 +2,27 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next muse use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
+
+
+
 
 
 
@@ -46,46 +58,25 @@
 
 <link href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/blog/css/main.css?v=6.0.0" rel="stylesheet" type="text/css" />
+<link href="/blog/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=6.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=6.3.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=6.0.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=6.3.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=6.0.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=6.3.0">
 
 
-  <link rel="mask-icon" href="/blog/images/logo.svg?v=6.0.0" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT" />
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=6.3.0" color="#222">
 
 
 
 
 
 
-
-
-
-
-<meta name="description" content="1. 前端 1.1 框架相关1.1.1 前端 UI 框架 Bootstrap UIKit AmazeUI Semantic-UI pure.css Foundation Framework7 Ant Design  1.1.2 移动 UI 框架 Mint-UI Vux Muse-UI Vum   1.1.3 前端开发框架 Vue Vue-生态 React Angular  1.2 前端工具库 jQ">
-<meta property="og:type" content="website">
-<meta property="og:title" content="收藏夹">
-<meta property="og:url" content="http://hisheng.net/blog/collection/index.html">
-<meta property="og:site_name" content="Hisheng Blog">
-<meta property="og:description" content="1. 前端 1.1 框架相关1.1.1 前端 UI 框架 Bootstrap UIKit AmazeUI Semantic-UI pure.css Foundation Framework7 Ant Design  1.1.2 移动 UI 框架 Mint-UI Vux Muse-UI Vum   1.1.3 前端开发框架 Vue Vue-生态 React Angular  1.2 前端工具库 jQ">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-03-02T12:16:44.054Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="收藏夹">
-<meta name="twitter:description" content="1. 前端 1.1 框架相关1.1.1 前端 UI 框架 Bootstrap UIKit AmazeUI Semantic-UI pure.css Foundation Framework7 Ant Design  1.1.2 移动 UI 框架 Mint-UI Vux Muse-UI Vum   1.1.3 前端开发框架 Vue Vue-生态 React Angular  1.2 前端工具库 jQ">
 
 
 
@@ -93,18 +84,14 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/blog/',
-    scheme: 'Pisces',
-    version: '6.0.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    scheme: 'Muse',
+    version: '6.3.0',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
     fastclick: false,
     lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -116,14 +103,40 @@
 </script>
 
 
-
-  <link rel="canonical" href="http://hisheng.net/blog/collection/"/>
-
+  
 
 
 
 
-  <title>PHP+Apache开发环境搭建注意事项 | Hisheng Blog</title>
+  <meta name="description" content="又是因为重装系统的原因，不得不重新走一遍PHP+Apache+MySQL的路，发现每一次搭建都会遇到不一样的坑，这次依然是不是很顺利，一大堆问题，慢慢叙来。">
+<meta name="keywords" content="PHP,开发环境搭建">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP+Apache开发环境搭建注意事项">
+<meta property="og:url" content="http://hisheng.net/blog/2016/09/04/PHP开发环境搭建/index.html">
+<meta property="og:site_name" content="Hisheng">
+<meta property="og:description" content="又是因为重装系统的原因，不得不重新走一遍PHP+Apache+MySQL的路，发现每一次搭建都会遇到不一样的坑，这次依然是不是很顺利，一大堆问题，慢慢叙来。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-05-12T06:23:53.652Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PHP+Apache开发环境搭建注意事项">
+<meta name="twitter:description" content="又是因为重装系统的原因，不得不重新走一遍PHP+Apache+MySQL的路，发现每一次搭建都会遇到不一样的坑，这次依然是不是很顺利，一大堆问题，慢慢叙来。">
+
+
+
+
+
+
+  <link rel="canonical" href="http://hisheng.net/blog/2016/09/04/PHP开发环境搭建/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>PHP+Apache开发环境搭建注意事项 | Hisheng</title>
   
 
 
@@ -133,9 +146,37 @@
 
 
 
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -146,24 +187,26 @@
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"> <div class="site-brand-wrapper">
+      <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
     
 
     <div class="custom-logo-site-title">
-      <a href="/blog/"  class="brand" rel="start">
+      <a href="/blog/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hisheng Blog</span>
+        <span class="site-title">Hisheng</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
-        <p class="site-subtitle"></p>
+        <p class="site-subtitle">simona, u're getting older</p>
       
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -171,55 +214,61 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/blog/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/blog/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/blog/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home">
+    <a href="/blog/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
         
-        <li class="menu-item menu-item-about">
-          <a href="/blog/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/blog/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/blog/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-收藏">
+    <a href="/blog/collection/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-star"></i> <br />收藏</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/blog/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+  </li>
 
       
+      
     </ul>
+  
+
+  
+    
+
   
 
   
@@ -227,12 +276,20 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
 
@@ -256,12 +313,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hisheng">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="simona, u're getting older">
       <meta itemprop="image" content="/blog/hacker.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hisheng Blog">
+      <meta itemprop="name" content="Hisheng">
     </span>
 
     
@@ -269,11 +326,19 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">PHP+Apache开发环境搭建注意事项</h1>
+          <h1 class="post-title" itemprop="name headline">PHP+Apache开发环境搭建注意事项
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -281,17 +346,48 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-09-04T10:52:04+08:00">2016-09-04</time>
+
+              
+                
+              
+
+              <time title="创建时间：2016-09-04 10:52:04" itemprop="dateCreated datePublished" datetime="2016-09-04T10:52:04+08:00">2016-09-04</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-05-12 14:23:53" itemprop="dateModified" datetime="2018-05-12T14:23:53+08:00">2018-05-12</time>
+              
             
           </span>
 
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/blog/2016/09/04/PHP开发环境搭建/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/09/04/PHP开发环境搭建/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -325,9 +421,12 @@
 <blockquote> TIMESTAMP with implicit DEFAULT value is deprecated. </blockquote>
 
 <p>解决方法: 找到安装目录的my-default.ini，复制一份为my.ini，内容如下</p>
-<blockquote><br># For advice on how to change settings please see<br># <a href="http://dev.mysql.com/doc/refman/5.6/en/server-configuration-defaults.html" target="_blank" rel="noopener">http://dev.mysql.com/doc/refman/5.6/en/server-configuration-defaults.html</a><br># <strong><em> DO NOT EDIT THIS FILE. It’s a template which will be copied to the<br># </em></strong> default location during install, and will be replaced if you<br># <em>*</em> upgrade to a newer version of MySQL.<br><br>[mysqld]<br><br># Remove leading # and set to the amount of RAM for the most important data<br># cache in MySQL. Start at 70% of total RAM for dedicated server, else 10%.<br>innodb_buffer_pool_size = 128M<br><br># Remove leading # to turn on a very important data integrity option: logging<br># changes to the binary log between backups.<br># log_bin<br><br># These are commonly set, remove the # and set as required.<br>basedir = C:/Program Files/MySQL/MySQL Server 5.6<br>datadir = C:/Program Files/MySQL/MySQL Server 5.6/data<br>port = 3306<br>server_id = 1<br><br>default-character-set=utf8<br><br># Remove leading # to set options mainly useful for reporting servers.<br># The server defaults are faster for transactions and fast SELECTs.<br># Adjust sizes as needed, experiment to find the optimal values.<br>join_buffer_size = 128M<br>sort_buffer_size = 2M<br>read_rnd_buffer_size = 2M<br><br>sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES<br><br>explicit_defaults_for_timestamp=true #重点是这一句<br></blockquote>
+<blockquote><br># For advice on how to change settings please see<br># <a href="http://dev.mysql.com/doc/refman/5.6/en/server-configuration-defaults.html" target="_blank" rel="noopener">http://dev.mysql.com/doc/refman/5.6/en/server-configuration-defaults.html</a><br># <strong><em> DO NOT EDIT THIS FILE. It’s a template which will be copied to the<br># </em></strong> default location during install, and will be replaced if you<br># *** upgrade to a newer version of MySQL.<br><br>[mysqld]<br><br># Remove leading # and set to the amount of RAM for the most important data<br># cache in MySQL. Start at 70% of total RAM for dedicated server, else 10%.<br>innodb_buffer_pool_size = 128M<br><br># Remove leading # to turn on a very important data integrity option: logging<br># changes to the binary log between backups.<br># log_bin<br><br># These are commonly set, remove the # and set as required.<br>basedir = C:/Program Files/MySQL/MySQL Server 5.6<br>datadir = C:/Program Files/MySQL/MySQL Server 5.6/data<br>port = 3306<br>server_id = 1<br><br>default-character-set=utf8<br><br># Remove leading # to set options mainly useful for reporting servers.<br># The server defaults are faster for transactions and fast SELECTs.<br># Adjust sizes as needed, experiment to find the optimal values.<br>join_buffer_size = 128M<br>sort_buffer_size = 2M<br>read_rnd_buffer_size = 2M<br><br>sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES<br><br>explicit_defaults_for_timestamp=true #重点是这一句<br></blockquote>
       
     </div>
+
+    
+
     
     
     
@@ -395,8 +494,15 @@
           </div>
           
 
-
-          
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
 
   
 
@@ -443,44 +549,137 @@
               <p class="site-description motion-element" itemprop="description">simona, u're getting older</p>
           </div>
 
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
+          
+            <nav class="site-state motion-element">
               
-                <a href="/blog/archives/">
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/blog/archives/">
+                
+                    <span class="site-state-item-count">39</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
               
-                  <span class="site-state-item-count">36</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
 
-            
-
-            
               
+
               
-              <div class="site-state-item site-state-tags">
-                <a href="/blog/tags/index.html">
-                  <span class="site-state-item-count">43</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/blog/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">40</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
             
-
-          </nav>
-
           
-
-          
-
-          
-          
-
-          
-          
-
           
 
         </div>
@@ -517,8 +716,8 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Hisheng</span>
 
@@ -528,20 +727,17 @@
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
-  <span class="post-meta-divider">|</span>
 
 
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.0</div>
 
 
 
 
         
+
 
 
 
@@ -616,68 +812,51 @@
   
 
 
-  <script type="text/javascript" src="/blog/js/src/utils.js?v=6.0.0"></script>
+  <script type="text/javascript" src="/blog/js/src/utils.js?v=6.3.0"></script>
 
-  <script type="text/javascript" src="/blog/js/src/motion.js?v=6.0.0"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/blog/js/src/affix.js?v=6.0.0"></script>
-
-  <script type="text/javascript" src="/blog/js/src/schemes/pisces.js?v=6.0.0"></script>
+  <script type="text/javascript" src="/blog/js/src/motion.js?v=6.3.0"></script>
 
 
 
   
-  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=6.0.0"></script>
-<script type="text/javascript" src="/blog/js/src/post-details.js?v=6.0.0"></script>
+  
+
+  
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=6.3.0"></script>
 
 
 
   
 
 
-  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=6.0.0"></script>
+  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=6.3.0"></script>
 
 
 
   
 
-
+  
+    <script id="dsq-count-scr" src="https://Hisheng.disqus.com/count.js" async></script>
   
 
-
-
-
-	
-
-
-
-
-
   
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.url = 'http://hisheng.net/blog/2016/09/04/PHP开发环境搭建/';
+        this.page.identifier = '2016/09/04/PHP开发环境搭建/';
+        this.page.title = 'PHP+Apache开发环境搭建注意事项';
+        };
+      function loadComments () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://Hisheng.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      }
+      
+        loadComments();
+      
+    </script>
   
 
 
@@ -686,11 +865,36 @@
 
   
 
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
   
 
   
 
   
+
+  
+  
+
+  
+
   
 
   
