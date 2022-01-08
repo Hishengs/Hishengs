@@ -55,7 +55,7 @@ html, body {
   color: #ffffff;
 }
 
-.title::after {
+.title > span::after {
   display: block;
   background: #ffc107;
   width: 110%;
@@ -64,5 +64,5 @@ html, body {
   z-index: -1;
   opacity: .6;
   height: 10px;
-  top: -12px;
+  top: -10px;
 }
