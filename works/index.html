@@ -24,18 +24,52 @@
     border-bottom: 1px solid #eee;
     padding-bottom: 15px;
   }
+  .work > p {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    max-width: 600px;
+    text-align: left;
+  }
+  .work > p > a {
+    margin-right: 10px;
+    flex-grow: 0;
+  }
+  .work > p > span {
+    flex: 1;
+    flex-grow: 1;
+    text-align: center;
+  }
 </style>
 
 <body>
   <div class="works">
     <div class="work">
       <h3 class="title"><span>一些微不足道的轮子（作品）</span></h3>
-      <a href="./heysoo/index.html" class="button" title="A Node Web Framework Based on Koa">Heysoo</a>
-      <a href="https://github.com/Hishengs/vue-schema-render" target="_blank" class="button" title="A Form Render Based on Vue">vue-schema-render</a>
-      <a href="https://github.com/Hishengs/panda-ui" target="_blank" class="button" title="A UI Framework Based on Vue">Panda UI</a>
-      <a href="https://github.com/hishengs/bookmark-syncer" target="_blank" class="button" title="A Bookmark Sync Util of Browser Plugin">Bookmark Syncer</a>
-      <a href="https://github.com/hishengs/my-messenger" target="_blank" class="button" title="an enhanced tool for iframe communication">my-messenger</a>
-      <a href="https://github.com/Hishengs/vue-md-doc-loader" target="_blank" class="button" title="a webpack loader for writing vue in markdown docs">vue-md-doc-loader</a>
+      <p>
+        <a href="./heysoo/index.html" class="button">Heysoo</a>
+        <span>A Node Web Framework Based on Koa</span>
+      </p>
+      <p>
+        <a href="https://github.com/Hishengs/vue-schema-render" target="_blank" class="button">vue-schema-render</a>
+        <span>A Form Render Based on Vue</span>
+      </p>
+      <p>
+        <a href="https://github.com/Hishengs/panda-ui" target="_blank" class="button">Panda UI</a>
+        <span>A UI Framework Based on Vue</span>
+      </p>
+      <p>
+        <a href="https://github.com/hishengs/bookmark-syncer" target="_blank" class="button">Bookmark Syncer</a>
+        <span>A Bookmark Sync Util of Browser Plugin</span>
+      </p>
+      <p>
+        <a href="https://github.com/hishengs/my-messenger" target="_blank" class="button">my-messenger</a>
+        <span>An Enhanced Tool for iframe Communication</span>
+      </p>
+      <p>
+        <a href="https://github.com/Hishengs/vue-md-doc-loader" target="_blank" class="button">vue-md-doc-loader</a>
+        <span>A Webpack Loader for Writing Vue in Markdown Docs</span>
+      </p>
     </div>
     <p>
       <a href="../index.html" class="button back">返回</a>
