@@ -54,3 +54,15 @@ html, body {
   background-color: #444444;
   color: #ffffff;
 }
+
+.title::after {
+  display: block;
+  background: #ffc107;
+  width: 110%;
+  content: "";
+  position: relative;
+  z-index: -1;
+  opacity: .6;
+  height: 15px;
+  top: -8px;
+}
