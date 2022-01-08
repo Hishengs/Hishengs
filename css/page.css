@@ -1,10 +1,10 @@
 @font-face {
-    font-family: Merriweather-Light;
-    src: url(./Merriweather-Light.ttf)
+    font-family: WenCangShuFang-2;
+    src: url(./WenCangShuFang-2.ttf)
 }
 
 html, body {
-  font-family: Merriweather-Light,-apple-system,Verdana,"PingFang SC","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+  font-family: WenCangShuFang-2,-apple-system,Verdana,"PingFang SC","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
   margin: 0;
   padding: 0;
   color: #333;
@@ -23,7 +23,7 @@ html, body {
   width: 120px;
   height: 120px;
   border-radius: 60px;
-  margin-top: 300px;
+  margin-top: 280px;
   box-shadow: 1px 2px 5px rgba(0,0,0,.2);
   animation: avatar-rotate 20s linear infinite;
 }
