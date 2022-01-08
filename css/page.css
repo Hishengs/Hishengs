@@ -69,11 +69,11 @@ html, body {
 }
 
 /* 装饰下划线 */
-.doco-line {
+.deco-line {
   display: inline-block;
   position: relative;
 }
-.doco-line::after {
+.deco-line::after {
   position: absolute;
   content: "";
   background: #ffc107;
@@ -85,6 +85,6 @@ html, body {
   opacity: .8;
   transition: height .4s;
 }
-.doco-line:hover::after {
+.deco-line:hover::after {
   height: 50%;
 }
