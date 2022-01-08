@@ -8,14 +8,31 @@
       <title>Hisheng</title>
       <link rel="stylesheet" href="./css/page.css">
       <style>
-        html, body {
+        body {
           text-align: center;
           background-image: url(./cover.png);
           background-size: cover;
+          padding-top: 40%;
         }
         .button, .button:link {
           color: white !important;
           border-color: white;
+        }
+        @keyframes avatar-rotate {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+        .avatar {
+          display: inline-block;
+          width: 120px;
+          height: 120px;
+          border-radius: 60px;
+          /* box-shadow: 1px 2px 5px rgba(0,0,0,.2); */
+          animation: avatar-rotate 20s linear infinite;
         }
         #greet {
           color: white;

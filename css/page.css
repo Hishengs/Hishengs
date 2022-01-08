@@ -10,24 +10,6 @@ html, body {
   color: #333;
 }
 
-@keyframes avatar-rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-.avatar {
-  display: inline-block;
-  width: 120px;
-  height: 120px;
-  border-radius: 60px;
-  margin-top: 280px;
-  box-shadow: 1px 2px 5px rgba(0,0,0,.2);
-  animation: avatar-rotate 20s linear infinite;
-}
-
 .button {
   font-size: 14px;
   text-decoration: none;
