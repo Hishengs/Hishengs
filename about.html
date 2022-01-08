@@ -25,6 +25,24 @@
     border-bottom: 1px solid #eee;
     padding-bottom: 15px;
   }
+  .intro-item > img {
+    display: inline-block;
+    width: 100%;
+    max-width: 500px;
+  }
+  #disqus_thread {
+    margin: 30px auto;
+  }
+  @media screen and (max-width: 1000px) {
+    #disqus_thread {
+      width: 100%;
+    }
+  }
+  @media screen and (min-width: 1000px) {
+    #disqus_thread {
+      width: 800px;
+    }
+  }
 </style>
 
 <body>
@@ -50,7 +68,7 @@
     <div class="intro-item">
       <h3 class="title"><span class="deco-line">隐藏身份：铲屎官</span></h3>
       <p><span class="deco-line">没错，我有一只猫</span></p>
-      <img src="./dizhu.png" alt="我家猫" style="max-width: 500px; display: inline-block;">
+      <img src="./dizhu.png" alt="我家猫">
     </div>
     <div class="intro-item">
       <h3 class="title"><span class="deco-line">我最近在...</span></h3>
@@ -69,7 +87,7 @@
       <a href="../index.html" class="button dark back">返回</a>
     </p>
     <!-- disqus -->
-    <div id="disqus_thread" style="width: 800px; margin: 20px auto;"></div>
+    <div id="disqus_thread"></div>
     <script>
       (function () {
         var d = document, s = d.createElement('script');
