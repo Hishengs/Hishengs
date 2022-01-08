@@ -37,7 +37,7 @@ html, body {
   height: 26px;
   line-height: 26px;
   padding: 0 18px;
-  margin: 0 5px;
+  margin: 0 5px 10px 5px;
   cursor: pointer;
   transition: padding .3s;
 }

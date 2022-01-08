@@ -16,7 +16,7 @@
           color: white !important;
           border-color: white;
         }
-        .greet {
+        #greet {
           color: white;
           margin: 30px 0;
         }
@@ -26,7 +26,7 @@
       <a href="./index.html">
         <img src="./hisheng.png" alt="avatar" class="avatar">
       </a>
-      <p class="greet">Simona , you're getting older</p>
+      <p id="greet">Simona , you're getting older</p>
       <p class="items">
         <a href="https://blog.hisheng.net" class="button" target="_blank">博客</a>
         <a href="https://github.com/hishengs" class="button" target="_blank">Github</a>
@@ -36,5 +36,12 @@
         <a href="./reading/index.html" class="button">阅读</a>
         <a href="./about.html" class="button">关于</a>
       </p>
+      <script>
+        var greets = [
+          'Simona , you\'re getting older',
+          '是谁来自山川湖海，却囿于厨房、昼夜与爱'
+        ];
+        document.getElementById('greet').innerText = greets[Math.floor(Math.random() * greets.length)];
+      </script>
     </body>
 </html>
