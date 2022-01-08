@@ -1,10 +1,10 @@
-@font-face {
+/* @font-face {
   font-family: SourceHanSansCN-Normal-2;
   src: url(./SourceHanSansCN-Normal-2.otf)
-}
+} */
 
 html, body {
-  font-family: SourceHanSansCN-Normal-2,-apple-system,Verdana,"PingFang SC","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+  /* font-family: SourceHanSansCN-Normal-2,-apple-system,Verdana,"PingFang SC","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif; */
   margin: 0;
   padding: 0;
   color: #333;
@@ -63,6 +63,6 @@ html, body {
   position: relative;
   z-index: -1;
   opacity: .6;
-  height: 15px;
-  top: -8px;
+  height: 10px;
+  top: -12px;
 }
