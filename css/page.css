@@ -1,10 +1,10 @@
 @font-face {
-    font-family: WenQuanWeiMiHei-1;
-    src: url(./WenQuanWeiMiHei-1.ttf)
+  font-family: SourceHanSansCN-Normal-2;
+  src: url(./SourceHanSansCN-Normal-2.otf)
 }
 
 html, body {
-  font-family: WenQuanWeiMiHei-1,-apple-system,Verdana,"PingFang SC","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+  font-family: SourceHanSansCN-Normal-2,-apple-system,Verdana,"PingFang SC","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
   margin: 0;
   padding: 0;
   color: #333;
