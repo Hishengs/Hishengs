@@ -1,78 +1,99 @@
 <!DOCTYPE html>
 <html lang="zh">
-    <head>
-      <meta charset="utf-8">
-      <link rel="icon" href="./favicon.ico">
-      <meta name="description" content="personal blog site">
-      <meta name="viewport" content="user-scalable=no, initial-scale=1, minimum-scale=1, width=device-width">
-      <title>Hisheng</title>
-      <link rel="stylesheet" href="./css/page.css">
-      <style>
-        body {
-          text-align: center;
-          background-image: url(./cover.png);
-          background-size: cover;
-          padding-top: 30vh;
-          padding-top: 200px;
-        }
-        .button, .button:link {
-          color: white !important;
-          border-color: white;
-        }
-        @keyframes avatar-rotate {
-          from {
-            transform: rotate(0deg);
-          }
-          to {
-            transform: rotate(360deg);
-          }
-        }
-        .avatar {
-          display: inline-block;
-          width: 120px;
-          height: 120px;
-          border-radius: 60px;
-          /* box-shadow: 1px 2px 5px rgba(0,0,0,.2); */
-          animation: avatar-rotate 20s linear infinite;
-        }
-        #greet {
-          color: white;
-          margin: 30px 0;
-        }
-      </style>
-    </head>
-    <body>
-      <a href="./index.html">
-        <img src="./hisheng.png" alt="avatar" class="avatar">
-      </a>
-      <p id="greet">Simona , you're getting older</p>
-      <p class="items">
-        <a href="https://blog.hisheng.net" class="button" target="_blank">博客</a>
-        <a href="https://github.com/hishengs" class="button" target="_blank">Github</a>
-        <a href="https://github.com/hishengs/notes" class="button" target="_blank">笔记</a>
-        <a href="./works/index.html" class="button">作品</a>
-        <a href="./collection/index.html" class="button">收藏集</a>
-        <a href="./reading/index.html" class="button">阅读</a>
-        <a href="./about.html" class="button">关于</a>
-      </p>
-      <script>
-        var greets = [
-          'Simona , you\'re getting older',
-          '是谁来自山川湖海，却囿于厨房、昼夜与爱',
-          '人生苦短，及时行乐（Carpe Diem）',
-          'Valar Morghulis, Valar Dohaeris',
-          '不取于相，如如不动 —— 《金刚经》第三十二节'
-        ];
-        document.getElementById('greet').innerText = greets[Math.floor(Math.random() * greets.length)];
-      </script>
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-TF5S6QXMYS"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
 
-        gtag('config', 'G-TF5S6QXMYS');
-      </script>
-    </body>
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="./favicon.ico">
+  <meta name="description" content="personal blog site">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Hisheng</title>
+  <link rel="stylesheet" href="./css/page.css">
+  <style>
+    body {
+      text-align: center;
+      background-image: url(./cover.png);
+      background-size: cover;
+      padding-top: 30vh;
+      padding-top: 200px;
+    }
+
+    .button,
+    .button:link {
+      color: white !important;
+      border-color: white;
+    }
+
+    @keyframes avatar-rotate {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .avatar {
+      display: inline-block;
+      width: 120px;
+      height: 120px;
+      border-radius: 60px;
+      /* box-shadow: 1px 2px 5px rgba(0,0,0,.2); */
+      animation: avatar-rotate 20s linear infinite;
+    }
+
+    #greet {
+      color: white;
+      margin: 30px 0;
+    }
+    #count {
+      position: absolute;
+      bottom: 10px;
+      color: #eee;
+      font-size: 12px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="./index.html">
+    <img src="./hisheng.png" alt="avatar" class="avatar">
+  </a>
+  <p id="greet">Simona , you're getting older</p>
+  <p class="items">
+    <a href="https://blog.hisheng.net" class="button" target="_blank">博客</a>
+    <a href="https://github.com/hishengs" class="button" target="_blank">Github</a>
+    <a href="https://github.com/hishengs/notes" class="button" target="_blank">笔记</a>
+    <a href="./works/index.html" class="button">作品</a>
+    <a href="./collection/index.html" class="button">收藏集</a>
+    <a href="./reading/index.html" class="button">阅读</a>
+    <a href="./about.html" class="button">关于</a>
+  </p>
+  <script>
+    var greets = [
+      'Simona , you\'re getting older',
+      '是谁来自山川湖海，却囿于厨房、昼夜与爱',
+      '人生苦短，及时行乐（Carpe Diem）',
+      'Valar Morghulis, Valar Dohaeris',
+      '不取于相，如如不动 —— 《金刚经》第三十二节'
+    ];
+    document.getElementById('greet').innerText = greets[Math.floor(Math.random() * greets.length)];
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TF5S6QXMYS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-TF5S6QXMYS');
+  </script>
+  <!-- count -->
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <p id="count">
+    <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+  </p>
+</body>
+
 </html>
