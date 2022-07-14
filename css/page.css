@@ -1,18 +1,45 @@
 /* @font-face {
   font-family: SourceHanSansCN-Normal-2;
   src: url(./SourceHanSansCN-Normal-2.otf)
+}
+
+@font-face {
+  font-family: JiYingHuiPianHuiSong-2;
+  src: url(./JiYingHuiPianHuiSong-2.ttf)
+} */
+
+@font-face {
+  font-family: SourceHanSerifSC;
+  src: url(./SourceHanSerifSC/SourceHanSerifSC-Medium.otf)
+}
+
+/* @font-face {
+  font-family: YanShiQiuHongKai-2;
+  src: url(./YanShiQiuHongKai-2.ttf)
 } */
 
 html, body {
-  font-family: 'Montserrat', sans-serif, -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  --textColor: #333;
+  --bgColor: #fff;
+  --borderColor: #eee;
+  /* font-family: 'Montserrat', sans-serif, -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; */
   /* font-family: SourceHanSansCN-Normal-2,-apple-system,Verdana,"PingFang SC","Helvetica Neue",Arial,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif; */
   margin: 0;
   padding: 0;
-  color: #333;
+  font-size: 18px;
+  color: var(--textColor);
+  /* background-color: var(--bgColor); */
 }
 
-h1, h2, h3, h4, h5, h6, p {
-  font-family: 'Merriweather', sans-serif;
+body.dark {
+  --textColor: #f5f5f5;
+  --bgColor: #333;
+  --borderColor: #444;
+  background-color: var(--bgColor);
+}
+
+h1, h2, h3, h4, h5, h6, p, div, span {
+  font-family: SourceHanSerifSC;
 }
 
 .button {
