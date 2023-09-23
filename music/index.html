@@ -1,115 +1,82 @@
 <!DOCTYPE html>
 <html lang="zh">
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="user-scalable=no, initial-scale=1, minimum-scale=1, width=device-width">
-      <title>Hisheng - 音乐</title>
-    </head>
-    <style>
-      html, body {
-        font-family: 'Microsoft Yahei';
-        text-align: center;
-        color: #333;
-      }
-      #music-title {
-        font-size: 24px;
-        margin-top: 300px;
-      }
-      #singer {
-        margin-bottom: 40px;
-      }
-      #tip {
-        display: none;
-        margin-top: 20px;
-        font-size: 14px;
-        color: #666;
-      }
-      #lyric {
-        margin-top: 30px;
-        font-size: 14px;
-        width: 500px;
-        margin: 0 auto;
-      }
-    </style>
-    <link rel="stylesheet" href="../css/page.css">
-    <body>
-      <p id="music-title"></p>
-      <p id="singer"></p>
-      <p class="items">
-        <a href="javascript:play(-1);" class="button">上一首</a>
-        <a href="javascript:play();" class="button" id="pause-btn">暂停</a>
-        <a href="javascript:play(+1);" class="button">下一首</a>
-        <a href="../index.html" class="button back">返回</a>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/ico" href="../favicon.ico">
+  <meta name="description" content="personal blog site">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Hisheng - 音乐</title>
+</head>
+<link rel="stylesheet" href="../css/page.css">
+<style>
+  body {
+    padding: 0 20px;
+  }
+  .songs {
+    padding-top: 40px;
+    text-align: center;
+  }
+  .song {
+    margin-bottom: 100px;
+  }
+  .song > h3 {
+    font-size: 24px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+  }
+</style>
+
+<body>
+  <div class="songs">
+    <div class="song">
+      <h3 class="title"><span class="deco-line">一些喜欢的音乐</span></h3>
+      <!-- Don't Cry (Alternate Lyrics) - Guns N' Roses -->
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=400 height=86 src="//music.163.com/outchain/player?type=2&id=18095081&auto=0&height=66"></iframe>
+      <!-- You're Beautiful - James Blunt -->
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=400 height=86 src="//music.163.com/outchain/player?type=2&id=5179544&auto=0&height=66"></iframe>
+      <!-- Way Back Into Love (Demo Version) - Hugh Grant and Drew Barrymore -->
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=400 height=86 src="//music.163.com/outchain/player?type=2&id=1349946492&auto=0&height=66"></iframe>
+      <!-- 动身 - 生祥乐队 -->
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=400 height=86 src="//music.163.com/outchain/player?type=2&id=417247973&auto=0&height=66"></iframe>
+      <!-- 姐姐 - 张楚 -->
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=400 height=86 src="//music.163.com/outchain/player?type=2&id=5269027&auto=0&height=66"></iframe>
+      <!-- 不万能的喜剧 - 万能青年旅店 -->
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=400 height=86 src="//music.163.com/outchain/player?type=2&id=386828&auto=0&height=66"></iframe>
+      <!-- 给自己的歌 (Live) - 纵贯线 -->
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=400 height=86 src="//music.163.com/outchain/player?type=2&id=394618&auto=0&height=66"></iframe>
+      <!-- 莉莉安 - 宋冬野 -->
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=400 height=86 src="//music.163.com/outchain/player?type=2&id=27646196&auto=0&height=66"></iframe>
+      <!-- Black Sheep - OmenXIII/ʎpoqou -->
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=400 height=86 src="//music.163.com/outchain/player?type=2&id=425828457&auto=0&height=66"></iframe>
+      <!-- 米店 - 张玮玮 -->
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=400 height=86 src="//music.163.com/outchain/player?type=2&id=26494698&auto=0&height=66"></iframe>
+      <!-- 探清水河 - 晓月老板 -->
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=400 height=86 src="//music.163.com/outchain/player?type=2&id=544070223&auto=0&height=66"></iframe>
+      <!-- Highway to Hell (Live at River Plate Stadium, Buenos Aires, Argentina - December 2009) -->
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=400 height=86 src="//music.163.com/outchain/player?type=2&id=27352512&auto=0&height=66"></iframe>
+      <p>
+        <a href="https://music.163.com/playlist?id=17590740&userid=19814387" target="_blank" class="button">完整歌单</a>
       </p>
-      <p id="tip"></p>
-      <div id="lyric"></div>
-      <audio id="song-player"></audio>
-      <script>
-        const songList = [
-          {
-            name: "1973",
-            singer: "James Blunt",
-            url: "https://dn-static-heysoo.qbox.me/James%20Blunt/1973.m4a",
-            lyric: '',
-          },
-          {
-            name: "Sweet Child O' Mine",
-            singer: "Guns N' Roses",
-            url: "https://dn-static-heysoo.qbox.me/Guns%20N%27%20Roses/Sweet%20Child%20O%27%20Mine.mp3",
-            lyric: '',
-          },
-          {
-            name: "给自己的歌",
-            singer: "李宗盛",
-            url: "https://dn-static-heysoo.qbox.me/%E6%9D%8E%E5%AE%97%E7%9B%9B/%E7%BB%99%E8%87%AA%E5%B7%B1%E7%9A%84%E6%AD%8C.mp3",
-            lyric: '',
-          },
-          {
-            name: "Don't Cry",
-            singer: "Guns N' Roses",
-            url: "https://dn-static-heysoo.qbox.me/Guns%20N%27%20Roses/Don%27t%20Cry.m4a",
-            lyric: '',
-          },
-        ];
-        const songPlayer = document.getElementById('song-player');
-        const musicTitle = document.getElementById('music-title');
-        const singer = document.getElementById('singer');
-        const pauseBtn = document.getElementById('pause-btn');
-        const tip = document.getElementById('tip');
-        const lyric = document.getElementById('lyric');
-        let currentPlayIndex = 0;
-        function play (step){
-          if(step === undefined){
-            if(songPlayer.paused){
-              songPlayer.play();
-              pauseBtn.innerText = '暂停';
-            }else {
-              songPlayer.pause();
-              pauseBtn.innerText = '播放';
-            }
-          }else {
-            const nextIndex = currentPlayIndex + step;
-            if(nextIndex >= 0 && nextIndex <= songList.length - 1){
-              currentPlayIndex = nextIndex;
-              const songToPlay = songList[currentPlayIndex];
-              songPlayer.src = songToPlay.url;
-              musicTitle.innerHTML = songToPlay.name;
-              singer.innerHTML = songToPlay.singer;
-              lyric.innerHTML = songToPlay.lyric;
-              songPlayer.play();
-              pauseBtn.innerText = '暂停';
-            }else {
-              tip.innerText = step > 0 ? '已经是最后一首' : '已经是第一首';
-              tip.style.display = 'block';
-              setTimeout(() => {
-                tip.style.display = 'none';
-              }, 1500);
-            }
-          }
-        }
-        setTimeout(() => {
-          play(0);
-        }, 200);
-      </script>
-    </body>
+    </div>
+    <div class="song">
+      <h3 class="title"><span class="deco-line">轻音乐 & 钢琴曲</span></h3>
+      <!-- Nocturne No. 2 in E Flat Major, Op. 9, No. 2 - Arthur Rubinstein -->
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=400 height=86 src="//music.163.com/outchain/player?type=2&id=1060914&auto=0&height=66"></iframe>
+      <!-- Trumpet Concerto in D major: II. Allegro moderato -->
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=400 height=86 src="//music.163.com/outchain/player?type=2&id=1694695&auto=0&height=66"></iframe>
+      <!-- Concerto For Piano & Orchestra "The Yellow River": 4. Defend the Yellow River -->
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=400 height=86 src="//music.163.com/outchain/player?type=2&id=114976&auto=0&height=66"></iframe>
+      <!-- Nocturne,Op.9,No.1 - 李云迪 -->
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=400 height=86 src="//music.163.com/outchain/player?type=2&id=117235&auto=0&height=66"></iframe>
+      <p>
+        <a href="https://music.163.com/playlist?id=2868842601&userid=19814387" target="_blank" class="button">完整歌单</a>
+      </p>
+    </div>
+    <p>
+      <a href="../index.html" class="button dark back">返回</a>
+    </p>
+  </div>
+</body>
+
 </html>
