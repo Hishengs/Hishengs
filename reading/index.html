@@ -13,26 +13,47 @@
   body {
     padding: 0 20px;
   }
-  .plans {
+
+  .book-categories {
     padding-top: 150px;
     text-align: center;
   }
-  .plan {
+
+  .book-category {
     margin-bottom: 100px;
   }
-  .plan > h3 {
+
+  .book-category>h3 {
     font-size: 24px;
     border-bottom: 1px solid #eee;
     padding-bottom: 15px;
   }
+
+  .book-category>.book-list {
+    max-width: 800px;
+    margin: 0 auto;
+  }
 </style>
 
 <body>
-  <div class="plans">
-    <div class="plan">
-      <h3 class="title"><span class="deco-line">2022 读书列表</span></h3>
-      <a href="https://book.douban.com/subject/26369699/" class="button" rel="noreferrer" target="_blank">被讨厌的勇气</a>
-      <a href="https://book.douban.com/subject/27154094/" class="button" rel="noreferrer" target="_blank">海子的诗</a>
+  <div class="book-categories">
+    <div class="book-category">
+      <h3 class="title"><span class="deco-line">一些读过的 (添加中...)</span></h3>
+      <div class="book-list">
+        <a href="https://book.douban.com/subject/4913064/" class="button" rel="noreferrer" target="_blank">活着</a>
+        <a href="https://book.douban.com/subject/1029791/" class="button" rel="noreferrer" target="_blank">许三观卖血记</a>
+        <a href="https://book.douban.com/subject/20441957/" class="button" rel="noreferrer" target="_blank">兄弟</a>
+        <a href="https://book.douban.com/subject/24540864/" class="button" rel="noreferrer" target="_blank">第七天</a>
+        <a href="https://book.douban.com/subject/26369699/" class="button" rel="noreferrer" target="_blank">被讨厌的勇气</a>
+        <a href="https://book.douban.com/subject/27154094/" class="button" rel="noreferrer" target="_blank">海子的诗</a>
+      </div>
+    </div>
+    <div class="book-category">
+      <h3 class="title"><span class="deco-line">一些在读</span></h3>
+      <div class="book-list">
+        <a href="https://book.douban.com/subject/6082808/" class="button" rel="noreferrer" target="_blank">百年孤独</a>
+        <a href="https://book.douban.com/subject/27608239/" class="button" rel="noreferrer" target="_blank">原则</a>
+      </div>
     </div>
     <p>
       <a href="../index.html" class="button dark back">返回</a>

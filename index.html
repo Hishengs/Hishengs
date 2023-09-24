@@ -9,12 +9,21 @@
   <title>Hisheng</title>
   <link rel="stylesheet" href="./css/page.css">
   <style>
+    html {
+      height: 100vh;
+    }
     body {
+      margin: 0;
       text-align: center;
+      /* background-color: #121212; */
+      /* background: linear-gradient(to bottom, #444, #111); */
       background-image: url(./cover.png);
       background-size: cover;
-      padding-top: 30vh;
       padding-top: 200px;
+    }
+
+    #name {
+      color: #fff;
     }
 
     .button,
@@ -49,6 +58,7 @@
       margin: 30px 0;
     }
     #count {
+      opacity: .1;
       position: absolute;
       bottom: 5px;
       left: 0;
@@ -61,9 +71,10 @@
 </head>
 
 <body>
-  <a href="./index.html">
+  <!-- <a href="./index.html">
     <img src="./hisheng.png" alt="avatar" class="avatar">
-  </a>
+  </a> -->
+  <h1 id="name">Hisheng</h1>
   <p id="greet">Simona , you're getting older</p>
   <p class="items">
     <a href="https://blog.hisheng.net" class="button" target="_blank">博客</a>
@@ -95,7 +106,7 @@
   </script>
   <!-- count -->
   <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <p id="count">
+  <p id="count" style="opacity: .1;">
     <span id="busuanzi_container_site_pv">本站总访问量 <span id="busuanzi_value_site_pv"></span> 次</span>
   </p>
 </body>

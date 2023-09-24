@@ -7,76 +7,153 @@
   <meta name="description" content="personal blog site">
   <meta name="viewport" content="user-scalable=no, initial-scale=1, minimum-scale=1, width=device-width">
   <title>Hisheng - 音乐</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.3.4/dist/vue.global.prod.js"></script>
+  <!-- TODO: 网易云音乐 API -->
+  <!-- https://github.com/Binaryify/NeteaseCloudMusicApi -->
 </head>
 <link rel="stylesheet" href="../css/page.css">
 <style>
   body {
     padding: 0 20px;
   }
-  .songs {
+  .song-categories {
     padding-top: 40px;
     text-align: center;
   }
-  .song {
-    margin-bottom: 100px;
+  .song-category {
+    margin-bottom: 40px;
   }
-  .song > h3 {
+  .song-category > h3 {
     font-size: 24px;
     border-bottom: 1px solid #eee;
     padding-bottom: 15px;
   }
+  .song-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .song-tip {
+    font-size: 14px;
+    color: #ccc;
+    margin-top: -10px;
+    margin-bottom: 0;
+  }
+  .song-wrapper {
+    display: inline-flex;
+    width: 400px;
+    height: 86px;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  .song-item {
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin: 0 10px;
+    cursor: pointer;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+  }
+  .song-item:hover {
+    border-color: #FFCD39;
+  }
 </style>
 
-<body>
-  <div class="songs">
-    <div class="song">
+<body id="music">
+  <div class="song-categories">
+    <div class="song-category">
+      <h3 class="title"><span class="deco-line">一些喜欢的歌手</span></h3>
+      <p style="max-width: 800px; margin: 0 auto;">
+        <a href="javascript:;" class="button">周杰伦</a>
+        <a href="javascript:;" class="button">许巍</a>
+        <a href="javascript:;" class="button">郑钧</a>
+        <a href="javascript:;" class="button">朴树</a>
+        <a href="javascript:;" class="button">陈奕迅</a>
+        <a href="javascript:;" class="button">李志</a>
+        <a href="javascript:;" class="button">李宗盛</a>
+        <a href="javascript:;" class="button">李上安</a>
+        <a href="javascript:;" class="button">陈绮贞</a>
+        <a href="javascript:;" class="button">Guns N' Roses</a>
+        <a href="javascript:;" class="button">Queen（皇后乐队）</a>
+        <a href="javascript:;" class="button">James Blunt</a>
+        <span>...</span>
+      </p>
+    </div>
+    <div class="song-category">
       <h3 class="title"><span class="deco-line">一些喜欢的音乐</span></h3>
-      <!-- Don't Cry (Alternate Lyrics) - Guns N' Roses -->
-      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=400 height=86 src="//music.163.com/outchain/player?type=2&id=18095081&auto=0&height=66"></iframe>
-      <!-- You're Beautiful - James Blunt -->
-      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=400 height=86 src="//music.163.com/outchain/player?type=2&id=5179544&auto=0&height=66"></iframe>
-      <!-- Way Back Into Love (Demo Version) - Hugh Grant and Drew Barrymore -->
-      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=400 height=86 src="//music.163.com/outchain/player?type=2&id=1349946492&auto=0&height=66"></iframe>
-      <!-- 动身 - 生祥乐队 -->
-      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=400 height=86 src="//music.163.com/outchain/player?type=2&id=417247973&auto=0&height=66"></iframe>
-      <!-- 姐姐 - 张楚 -->
-      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=400 height=86 src="//music.163.com/outchain/player?type=2&id=5269027&auto=0&height=66"></iframe>
-      <!-- 不万能的喜剧 - 万能青年旅店 -->
-      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=400 height=86 src="//music.163.com/outchain/player?type=2&id=386828&auto=0&height=66"></iframe>
-      <!-- 给自己的歌 (Live) - 纵贯线 -->
-      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=400 height=86 src="//music.163.com/outchain/player?type=2&id=394618&auto=0&height=66"></iframe>
-      <!-- 莉莉安 - 宋冬野 -->
-      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=400 height=86 src="//music.163.com/outchain/player?type=2&id=27646196&auto=0&height=66"></iframe>
-      <!-- Black Sheep - OmenXIII/ʎpoqou -->
-      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=400 height=86 src="//music.163.com/outchain/player?type=2&id=425828457&auto=0&height=66"></iframe>
-      <!-- 米店 - 张玮玮 -->
-      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=400 height=86 src="//music.163.com/outchain/player?type=2&id=26494698&auto=0&height=66"></iframe>
-      <!-- 探清水河 - 晓月老板 -->
-      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=400 height=86 src="//music.163.com/outchain/player?type=2&id=544070223&auto=0&height=66"></iframe>
-      <!-- Highway to Hell (Live at River Plate Stadium, Buenos Aires, Argentina - December 2009) -->
-      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=400 height=86 src="//music.163.com/outchain/player?type=2&id=27352512&auto=0&height=66"></iframe>
+      <p class="song-tip">点击可播放</p>
+      <div class="song-list">
+        <Song id="18095081">Don't Cry (Alternate Lyrics) - Guns N' Roses</Song>
+        <Song id="5179544">You're Beautiful - James Blunt</Song>
+        <Song id="1349946492">Way Back Into Love (Demo Version) - Hugh Grant and Drew Barrymore </Song>
+        <Song id="417247973">动身 - 生祥乐队</Song>
+        <Song id="5269027">姐姐 - 张楚</Song>
+        <Song id="386828">不万能的喜剧 - 万能青年旅店</Song>
+        <Song id="394618">给自己的歌 (Live) - 纵贯线</Song>
+        <Song id="27646196">莉莉安 - 宋冬野</Song>
+        <Song id="425828457">Black Sheep - OmenXIII/ʎpoqou</Song>
+        <Song id="26494698">米店 - 张玮玮</Song>
+        <Song id="544070223">探清水河 - 晓月老板</Song>
+        <Song id="27352512">Highway to Hell (Live at River Plate Stadium, Buenos Aires, Argentina - December 2009)</Song>
+        <Song id="18449193">Say Hello - Rosie Thomas/Sufjan Stevens</Song>
+        <Song id="439625244">夜长梦多 - 李上安</Song>
+        <Song id="506196018">Legends Never Die - Against the Current</Song>
+        <Song id="33638527">Creep - Daniela Andrade</Song>
+      </div>
       <p>
         <a href="https://music.163.com/playlist?id=17590740&userid=19814387" target="_blank" class="button">完整歌单</a>
       </p>
     </div>
-    <div class="song">
+    <div class="song-category">
       <h3 class="title"><span class="deco-line">轻音乐 & 钢琴曲</span></h3>
-      <!-- Nocturne No. 2 in E Flat Major, Op. 9, No. 2 - Arthur Rubinstein -->
-      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=400 height=86 src="//music.163.com/outchain/player?type=2&id=1060914&auto=0&height=66"></iframe>
-      <!-- Trumpet Concerto in D major: II. Allegro moderato -->
-      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=400 height=86 src="//music.163.com/outchain/player?type=2&id=1694695&auto=0&height=66"></iframe>
-      <!-- Concerto For Piano & Orchestra "The Yellow River": 4. Defend the Yellow River -->
-      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=400 height=86 src="//music.163.com/outchain/player?type=2&id=114976&auto=0&height=66"></iframe>
-      <!-- Nocturne,Op.9,No.1 - 李云迪 -->
-      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=400 height=86 src="//music.163.com/outchain/player?type=2&id=117235&auto=0&height=66"></iframe>
-      <p>
-        <a href="https://music.163.com/playlist?id=2868842601&userid=19814387" target="_blank" class="button">完整歌单</a>
-      </p>
+      <div class="song-list">
+        <Song id="1060914">Nocturne No. 2 in E Flat Major, Op. 9, No. 2 - Arthur Rubinstein</Song>
+        <Song id="1694695">Trumpet Concerto in D major: II. Allegro moderato</Song>
+        <Song id="114976">Concerto For Piano & Orchestra "The Yellow River": 4. Defend the Yellow River</Song>
+        <Song id="117235">Nocturne,Op.9,No.1 - 李云迪</Song>
+        <Song id="1091776">Lavender Hills - Brian Crain</Song>
+      </div>
     </div>
     <p>
       <a href="../index.html" class="button dark back">返回</a>
     </p>
   </div>
+  <script>
+    const { createApp, defineComponent } = Vue
+    const Song = defineComponent({
+      props: {
+        id: String,
+      },
+      data () {
+        return {
+          show: false,
+        };
+      },
+      computed: {
+        src () {
+          return `//music.163.com/outchain/player?type=2&id=${this.id}&auto=1&height=66`
+        }
+      },
+      template: `
+      <div class="song-wrapper" title="点击播放">
+      <p v-if="!show" class="song-item" @click="show=true"><slot /></p>
+      <iframe v-else frameborder="no" border="0" marginwidth="0" marginheight="0" width=400 height=86 :src="src"></iframe>
+      </div>
+      `
+    });
+    createApp({
+      components: {
+        Song,
+      },
+    }).mount('#music')
+  </script>
 </body>
 
 </html>
